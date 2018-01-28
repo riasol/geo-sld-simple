@@ -1,6 +1,5 @@
 import SLD from '../SLD'
 import Map from 'ol/map'
-import './style.css'
 import VectorSource from 'ol/source/vector'
 import VectorLayer from 'ol/layer/vector'
 import GeoJsonFormat from 'ol/format/geojson'
@@ -8,6 +7,8 @@ import Style from 'ol/style/style'
 import View from 'ol/view'
 import geojson from './geojson1'
 import sldJson from '../files/generic'
+import './style.css'
+import 'ol/ol.css'
 
 const target = document.createElement('div')
 target.id = 'map'

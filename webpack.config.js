@@ -4,7 +4,7 @@ module.exports = {
     entry: {app: './src/demo/index.js'},
     devtool: 'inline-source-map',
     devServer: {contentBase: './dist'},
-    plugins: [new HtmlWebpackPlugin({title: 'html webpack plugin title'})],
+    plugins: [new HtmlWebpackPlugin({title: 'Demo'})],
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
@@ -15,6 +15,10 @@ module.exports = {
             use: [
                 'style-loader', 'css-loader'
             ]
-        }]
+        },
+            {
+                test: /\.(js|jsx)$/,
+                use: 'babel-loader'
+            }]
     }
 };
