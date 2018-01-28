@@ -1,0 +1,239 @@
+{
+  "StyledLayerDescriptor": {
+    "$": {
+      "version": "1.0.0",
+      "xsi:schemaLocation": "http://www.opengis.net/sld StyledLayerDescriptor.xsd",
+      "xmlns": "http://www.opengis.net/sld",
+      "xmlns:ogc": "http://www.opengis.net/ogc",
+      "xmlns:xlink": "http://www.w3.org/1999/xlink",
+      "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance"
+    },
+    "NamedLayer": [
+      {
+        "Name": [
+          "generic"
+        ],
+        "UserStyle": [
+          {
+            "Title": [
+              "Generic"
+            ],
+            "Abstract": [
+              "Generic style"
+            ],
+            "FeatureTypeStyle": [
+              {
+                "Rule": [
+                  {
+                    "Name": [
+                      "raster"
+                    ],
+                    "Title": [
+                      "raster"
+                    ],
+                    "ogc:Filter": [
+                      {
+                        "ogc:PropertyIsEqualTo": [
+                          {
+                            "ogc:Function": [
+                              {
+                                "$": {
+                                  "name": "isCoverage"
+                                }
+                              }
+                            ],
+                            "ogc:Literal": [
+                              "true"
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "RasterSymbolizer": [
+                      {
+                        "Opacity": [
+                          "1.0"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "Name": [
+                      "Polygon"
+                    ],
+                    "Title": [
+                      "Polygon"
+                    ],
+                    "ogc:Filter": [
+                      {
+                        "ogc:PropertyIsEqualTo": [
+                          {
+                            "ogc:Function": [
+                              {
+                                "$": {
+                                  "name": "dimension"
+                                },
+                                "ogc:Function": [
+                                  {
+                                    "$": {
+                                      "name": "geometry"
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            "ogc:Literal": [
+                              "2"
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "PolygonSymbolizer": [
+                      {
+                        "Fill": [
+                          {
+                            "CssParameter": [
+                              {
+                                "_": "#AAAAAA",
+                                "$": {
+                                  "name": "fill"
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "Stroke": [
+                          {
+                            "CssParameter": [
+                              {
+                                "_": "#000000",
+                                "$": {
+                                  "name": "stroke"
+                                }
+                              },
+                              {
+                                "_": "1",
+                                "$": {
+                                  "name": "stroke-width"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "Name": [
+                      "Line"
+                    ],
+                    "Title": [
+                      "Line"
+                    ],
+                    "ogc:Filter": [
+                      {
+                        "ogc:PropertyIsEqualTo": [
+                          {
+                            "ogc:Function": [
+                              {
+                                "$": {
+                                  "name": "dimension"
+                                },
+                                "ogc:Function": [
+                                  {
+                                    "$": {
+                                      "name": "geometry"
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            "ogc:Literal": [
+                              "1"
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "LineSymbolizer": [
+                      {
+                        "Stroke": [
+                          {
+                            "CssParameter": [
+                              {
+                                "_": "#0000FF",
+                                "$": {
+                                  "name": "stroke"
+                                }
+                              },
+                              {
+                                "_": "1",
+                                "$": {
+                                  "name": "stroke-opacity"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "Name": [
+                      "point"
+                    ],
+                    "Title": [
+                      "Point"
+                    ],
+                    "ElseFilter": [
+                      ""
+                    ],
+                    "PointSymbolizer": [
+                      {
+                        "Graphic": [
+                          {
+                            "Mark": [
+                              {
+                                "WellKnownName": [
+                                  "square"
+                                ],
+                                "Fill": [
+                                  {
+                                    "CssParameter": [
+                                      {
+                                        "_": "#FF0000",
+                                        "$": {
+                                          "name": "fill"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ],
+                            "Size": [
+                              "6"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "VendorOption": [
+                  {
+                    "_": "first",
+                    "$": {
+                      "name": "ruleEvaluation"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
